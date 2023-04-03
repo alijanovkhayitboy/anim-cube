@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.orta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 500px;
+
+}
+
+
+.body {
+    width: 120px;
+    height: 120px;
+    transform-style: preserve-3d;
+    transform: rotateX(-25deg) rotateY(45deg);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.body:hover {
+    transform: rotateX(-25deg) rotateY(45deg) translateY(-15px);
+}
+
+.body:hover .past {
+    box-shadow: -22px -22px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.body>* {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.598);
+}
+
+.chap {
+    transform: rotateY(-90deg) translateZ(60px);
+}
+
+.chap::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-origin: 50% 100%;
+    animation: animat 4s ease-in-out infinite alternate;
+}
+
+.ong {
+    transform: rotateY(90deg) translateZ(60px);
+}
+
+.ong::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-origin: 50% 100%;
+    animation: animat 4s ease-in-out infinite alternate;
+}
+
+.orqa {
+    transform: rotateY(180deg) translateZ(60px);
+}
+
+.orqa::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-origin: 50% 100%;
+    animation: animat 4s ease-in-out infinite alternate;
+}
+
+.old {
+    transform: rotateY(0deg) translateZ(60px);
+}
+
+.old::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-origin: 50% 100%;
+    animation: animat 4s ease-in-out infinite alternate;
+}
+
+.tepa {
+    transform: rotateY(90deg) translateZ(60px);
+    opacity: 0.5;
+}
+
+.tepa-1 {
+    background: url(../img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: animat-1 4s ease-in-out infinite alternate;
+}
+
+.past {
+
+    transform: rotateX(-90deg) translateZ(60px);
+    background: url(../img/back.jpg);
+    box-shadow: -8px -8px 10px 0 rgba(0, 0, 0, 0.4);
+    transition: all .5s ease-in-out;
+}
+
+
+@keyframes animat {
+    0% {
+        transform: scaleY(0);
+    }
+
+    25% {
+        transform: scaleY(0);
+    }
+
+    75% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+
+
+}
+
+
+@keyframes animat-1 {
+    0% {
+        transform: rotateX(90deg) translateZ(-60px);
+    }
+
+    25% {
+        transform: rotateX(90deg) translateZ(-60px);
+    }
+
+    75% {
+        transform: rotateX(90deg) translateZ(59px);
+    }
+
+    100% {
+        transform: rotateX(90deg) translateZ(59px);
+    }
+}
